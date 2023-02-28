@@ -39,3 +39,7 @@ Route::resource('tasks',TaskController::class);
 // Route::post('/delete',[TaskController::class,'delete']);//タスク削除
 // ---------------------------
 require __DIR__.'/auth.php';
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
